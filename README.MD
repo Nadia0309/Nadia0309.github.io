@@ -8,14 +8,14 @@ https://nadia0309.github.io/first_static_project/
 Website with a fluid self-written layout, which breaks through media-queries; implementation of JavaScript techniques and libraries (dynamic picture gallery, image slider, form validation) <br>
 https://nadia0309.github.io/javascript_responsivedesign/
 <p></p>
-<strong>#3 BANNER ANIMATION.(not responsive)</strong><br>
+<strong>#3 BANNER AND LOGO ANIMATION.(not responsive)</strong><br>
 https://nadia0309.github.io/banner_animation/
 <p></p>
 <strong>#4 PLAYGROUND</strong><br>
-https://nadia0309.github.io/playground/slider/
-https://nadia0309.github.io/playground/puzzle/
-https://nadia0309.github.io/playground/stars/
-https://nadia0309.github.io/playground/blue_menu/
+https://nadia0309.github.io/playground/slider/<br>
+https://nadia0309.github.io/playground/puzzle/<br>
+https://nadia0309.github.io/playground/stars/<br>
+https://nadia0309.github.io/playground/blue_menu/<br>
 <p></p>
 <strong>#5 USABILITY TEST</strong><br>
 https://nadia0309.github.io/Usability-Test%20Swiss%20NadiiaZwyssig.pdf
