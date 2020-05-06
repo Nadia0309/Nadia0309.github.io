@@ -1,0 +1,516 @@
+﻿                /*GENERAL SETTINGS FOR EVERY WEBPAGE*/
+
+* {
+   -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.showme{
+    overflow: visible;
+    overflow-x: hidden;   
+}
+.container {
+    width: 100vw;   
+}                        /* ACCESS LINKKS*/
+#access-links{
+    left: -1000em;
+    position: absolute;
+    width: 1px;
+} 
+h2{
+    color: #0f0c0c;
+    font-family: "roboto", "arial";
+    font-size: 1.6rem;
+    font-weight: 500;
+	text-transform: uppercase;
+    text-align: left;
+	padding: 2rem 0 1rem;
+}
+h3{
+    font-weight: bolder;
+    margin: 8px 0 5px;
+    font-size: 0.9rem;
+}
+
+h4{
+    font-weight: bolder;;
+}
+
+                         /*HEADER :SEARCH BUTTON, LOGO*/
+
+
+header {
+    height :12vh;
+    width :100vw;
+    background-color: white;
+    border-bottom : 1px solid lightgray;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+                         /*LOGO*/
+
+
+h1 {
+    padding: 2vh 0 3vh 4vw;
+    display: inline-block;   
+}
+
+h1 img {
+    height: 8vh;
+    width: 34vw;     
+}
+
+                         /*SEARCH*/
+
+div.search {
+    float:	right;
+    background-color: transparent; 
+    
+}
+#search-form {
+    width:	10vw;
+    height:	5.1vh;
+    border:	0;
+    outline: none;
+    font-family: "roboto","arial",sans-serif;
+    font-weight: 300;
+    font-size:	0.9rem;
+    background-color: transparent;
+    padding-top: 1vh;
+    float:right;
+}
+
+input::placeholder {
+    color:	darkslategrey;
+}
+
+.search button {          
+    background-color:	transparent;
+    border:	none;
+    padding-top: 2vh;  
+}
+ 
+                         /*MAIN FüR HOME PAGE*/
+
+main.home{ 
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../img/photos_home_page/background_homepage.png); 
+}
+ 
+
+                    
+
+
+                         /*NAVIGATION*/ 
+
+nav{
+    height: 73vh;
+    width: 30vw;
+    margin-left: 4vw;
+    line-height: 2rem;
+	padding-top: 2rem;
+    position: fixed;
+    top: 15vh;
+    left: 0vh;   
+}
+
+nav a {
+	  color: #0f0c0c;
+    font-family: "roboto", "arial";
+    font-size: 1.2rem;
+    font-weight: 500;
+	  text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    text-decoration: none;
+    }
+nav a:hover{
+	 	color: #615151;
+}
+
+
+                         /*ASIDE FÜR  MAIN PAGE*/
+
+aside#model{
+    height: 98vh;
+    width: 60vw;
+    position: absolute;
+    bottom: -2.1vh;		
+    right: 0vw; 
+    float: left;
+}
+
+aside#model img{ 
+    position :relative; 
+    height :inherit;
+    width :auto;
+    
+}
+                         /*FOOTER*/      
+footer{
+    height :15vh;
+    width :100vw;
+    background-color :rgba(105, 105, 105, 0.71);
+    position :fixed;
+    bottom :0;
+    left: 0;
+    z-index :0;   
+}
+
+footer ul{
+    columns: 4;
+    column-width :15vw;
+    color :white;     
+    height :8vh;
+    font-family :"roboto","arial",sans-serif;
+    text-align :left;
+    font-size :0.8rem;
+    text-transform :uppercase;
+    line-height :1.5rem;
+    font-weight :300;
+    position :relative;
+    z-index: 2;
+    top :5vh;
+    left :4vw;
+}
+
+footer a{
+	text-decoration :none;
+	color :white;
+}
+
+footer a:hover {
+	text-decoration: none;
+	color: black;
+    }
+footer i{
+    font-size: 1.1rem;
+    margin-right: 15px;
+}
+                     
+                         /*MAIN FüR SERVICE PAGE*/
+
+main.service {
+    height: 88vh;
+    width: 100vw;
+    background-color: white;
+      
+}
+                         /*SECTION FÜR DIE SERVICE PAGE*/
+section.service {   
+    height: 70vh;
+    width: 66vw;
+    float: right;
+    margin: 15vh 0;  
+    background-color :white;
+    font-family: "roboto","arial",sans-serif;
+    text-align: left;
+    font-size: 0.7rem;
+    line-height: 1.3rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 400; 
+}
+.service p{
+    padding-right: 30px;
+}
+.service img {
+     width: 680px;
+     height: 300px;
+     margin: 5vh 0; 
+     float: left;
+  }  
+section#email{
+    height: 15vh;
+    width: 20vw;
+    float: left;
+    margin-right: 4vw; 
+}
+section#phone{
+    height: 15vh;
+    width: 20vw;
+    float: left;
+    margin-left: 10vw;
+    
+}
+
+                     /* SERVICE BUTTONS*/
+
+
+section.service button{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 8px 55px;
+    font-weight: 600;
+    font-size: 0.7rem;
+    margin-top: 10px;
+    border-color: black;
+    margin-bottom: 20vh;
+    letter-spacing: 0.18em;
+}
+
+                         /*COLLECTION PAGE*/
+
+section.collection{
+    margin: 15vh 0;  
+    width: 66vw;
+    float: right;
+    background-color: white;
+    overflow-y: scroll;
+    -ms-overflow-style:none;
+    overflow: -moz-scrollbars-none;
+}
+section.collection::-webkit-scrollbar{
+    display: none;
+}
+#testerino{
+    width: 50%;
+    height: 60vh;
+    float: right;
+    margin-bottom: 10px;
+}
+
+#testerino:nth-child(even){
+    float: left;   
+}
+
+.collection img{
+    height: 48vh;
+    display: block;
+}
+
+.collection img:hover{
+box-shadow:
+   0 1px 4px rgba(0, 0, 0, .3),
+   -23px 0 30px -23px rgba(0, 0, 0, .4),
+   23px 0 30px -23px rgba(0, 0, 0, .4),
+   0 40px rgba(0, 0, 0, .1)inset;
+   height: 55vh; 
+   cursor: pointer;
+   }     
+
+                         /*EMAIL FORM*/
+#contact{
+    width: 40vw;
+    height: 50px;
+    font-family: "roboto","arial",sans-serif;
+    text-align : left;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 60px; 
+    padding-top: 1.5rem;
+    letter-spacing: 0.18em;
+    line-height: 1.3rem;
+}
+
+.form {
+    width: 66vw;
+    margin-top: 12vh;
+    float: right;
+    background-color: white;
+    overflow-y: scroll;
+   -ms-overflow-style: none;
+    text-align: center;
+}		
+section.form::-webkit-scrollbar{
+    display: none;
+}
+.form_action {
+    width: 50vw;
+    line-height: 0px;
+    font-family: "roboto","arial",sans-serif;
+    text-align: justify;
+    font-size: 0.7rem;
+    line-height: 2px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-top: 20px;
+}
+.form_action::-webkit-scrollbar{
+    display: none;
+}
+.form_action label{
+   display: block;
+   width: 150px;
+   padding: 10px 0;
+}
+.form_action input{
+   padding: 7px;
+   margin-left: 0px;
+   width: 40vw;
+   height: 5px;
+   border: 1px solid black;
+   outline: none;  
+}
+label{
+    margin-top: 5px;
+}
+select{
+    width: 40vw;
+    border: 1px solid black;
+    font-family: "roboto","arial",sans-serif;
+    text-align: left;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    line-height: 1rem;
+    font-weight: 300; 
+    letter-spacing: 0.18em;
+    
+    
+}
+textarea{
+    width: 40vw;
+    height: 150px;
+    resize: vertical;
+    border: 1px solid black;
+    
+}   
+ #bottom{
+    padding-top: 1rem;
+    font-family: "roboto","arial",sans-serif;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 1rem;
+    font-weight: 300;
+}
+
+#submit{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 8px 55px;
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-color: black;
+    width: 40vw;
+    height: 30px;
+}
+
+                    /*SECTION.ABOUT*/
+
+
+section.about{
+    margin: 20vh 0 25vh 0;
+    width: 66vw;
+    float: right;
+    background-color: white;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    position: relative;
+    left:-50px;
+    z-index: -1;
+    font-family: "roboto","arial",sans-serif;
+    text-align: left;
+    font-size: 0.7rem;
+    line-height: 1.3rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+section.about::-webkit-scrollbar{
+    display: none;
+}
+#brand,#handwork,#designer{
+    position: relative;
+    width: 30%;
+    float: right;
+    border-left: 1.5px solid #666; 
+}
+#designer{
+    border-right: 1.5px solid #666; 
+}
+.about p{
+    padding:  0 30px 0 30px; 
+}
+
+.about img{
+  height: 300px;
+  width: 250px;
+  padding: 0 10px 0;
+}
+
+.about h3{
+    padding:  5px 30px 5px; 
+}
+.about article{ 
+    height: 1395px;
+}
+
+                        /*SECTION.STORE_LOCATOR*/
+
+
+section.store_locator{
+    width: 66vw;
+    margin-top: 15vh;
+    float: right;
+    background-color: white;
+    text-align: left;
+    position: relative;
+    left:-30px;
+    z-index: 0;
+    font-family :"roboto","arial",sans-serif;
+    font-size :0.7rem;
+    line-height :1.3rem;
+    letter-spacing: 0.18em;
+    text-transform :uppercase;
+    font-weight :400;
+}
+.store_locator p{
+   color:#666; 
+}
+.store a:hover{
+    color:#666;
+}
+section.store_locator a{
+    color: black;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px black solid;
+}
+
+.store {
+    columns: 3;
+    float: left;
+    column-width: 20vw;
+    margin-bottom: 40px;
+    text-align:left;
+
+}
+.online{
+    columns: 3;
+    float: left;
+    column-width: 20vw;
+    text-align: left;
+}
+ h3.online{
+    margin-top: 40px;
+}
+.store h3:nth-child(1){
+    margin-top:0px ;
+}
+.store_locator hr{
+    width: 57vw;
+    color: silver;
+    float: left;
+}
+
+     
+     
+
+

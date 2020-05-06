@@ -1,0 +1,170 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sliding Puzzle</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+<!--ANFANG: Java Script-->
+<script>
+    
+    //Coutns of clicks by the player
+    let numberOfClicks = 0;
+        function addClick(){
+            //numberOfClicks = numberOfClicks + 1;
+            numberOfClicks++;
+            
+            //console.log(numberOfClicks);
+            
+            document.f1.clicks_on_me.value = numberOfClicks;
+            
+            checkPuzzle();
+        }
+    
+    //Moves each puzzle piece
+    function gameMovePic(number){
+        
+    //If: Bild nach UNTEN aka DOWN
+        //Check of image can be moved down
+        //Diese Num. können nach Untenverschoben werden --> Frage: Ist es möglich die Position zuändern?
+        if (number == 0 || number == 1 || number == 2 || number == 3 || number == 4 || number == 5){
+            //img number wich is directly under the clicked img
+            var numUnder = number + 3;
+            
+            //console.log(document.images[numUnder].src.indexOf("blind.gif"));
+            
+            //Vergleich: Index numUnder: nicht = -1 ist ?
+            if ( document.images[numUnder].src.indexOf("blind.gif") != -1 ){
+                
+               //blindpath for blind.gif saved in variable and change with img src
+               var blindSrc = document.images[numUnder].src;
+                
+               //numUnder wird durch die src des geclickten Bildes ausgetauscht
+               document.images[numUnder].src = document.images[number].src;
+                
+               document.images[number].src = blindSrc;
+                
+               addClick();
+                
+               //return: function ist beendet: (function wird geändernt: X wird nicht sattfinden)
+               return
+            }
+        }
+        
+    //If: Bild nach OBEN aka UP
+        if (number == 3 || number == 4 || number == 5 || number == 6 || number == 7 || number == 8){
+            var numUp = number - 3;
+            
+            //console.log(document.images[numUp].src.indexOf("blind.gif"));
+            
+            if ( document.images[numUp].src.indexOf("blind.gif") != -1 ){
+                
+               var blindSrc = document.images[numUp].src;
+               document.images[numUp].src = document.images[number].src;
+               document.images[number].src = blindSrc;
+                
+               addClick();
+                
+               return
+            }
+        }    
+        
+    //If: Bild nach LINKS aka LEFT
+        if (number == 1 || number == 2 || number == 4 || number == 5 || number == 7 || number == 8){
+            var numLeft = number - 1;
+            
+            //console.log(document.images[numLeft].src.indexOf("blind.gif"));
+            
+            if ( document.images[numLeft].src.indexOf("blind.gif") != -1 ){
+                
+               var blindSrc = document.images[numLeft].src;
+               document.images[numLeft].src = document.images[number].src;
+               document.images[number].src = blindSrc;
+                
+               addClick();
+                
+               return
+            }
+        } 
+        
+    //If: Bild nach RIGHT aka RECHTS
+        if (number == 0 || number == 1 || number == 3 || number == 4 || number == 6 || number == 7){
+            var numRight = number + 1;
+            
+            //console.log(document.images[numRight].src.indexOf("blind.gif"));
+            
+            if (document.images[numRight].src.indexOf("blind.gif") != -1 ){
+                
+               var blindSrc = document.images[numRight].src;
+               document.images[numRight].src = document.images[number].src;
+               document.images[number].src = blindSrc;
+                
+               addClick();
+                
+               return
+            }
+        }
+        
+   
+    } //Closing: function gameMovePic(number)
+    
+        //Is the puzzle correct?
+        function checkPuzzle(){
+            
+            blindIndex = -1;
+            
+            for (var i = 0; i < document.images.length; i++){
+                if (document.images[i].src.indexOf("blind.gif") != -1){
+                    blindIndex = i;
+                } else {
+                    var bildname = "bild_" + i + ".gif";
+                    if (document.images[i].src.indexOf(bildname) == -1){
+                        return;
+                    }
+                }
+            }
+        
+        
+        if (blindIndex != -1){
+            document.images[blindIndex].src = "bilder/bild_2.gif";
+            alert ("Congratulations! You completed the game with " + numberOfClicks + "number of clicks");
+        }
+        }
+    
+</script>
+	
+</head>
+
+
+<!--ANFANG SICHTBARER BEREICH: Body-->
+<body style="background-color:#000033; color:white;">
+<main style="width:200px; height: 200px; margin:auto; text-align: center;">
+
+<h1>Ein JavaScript Puzzle</h1>
+
+<table cellspacing="1" cellpadding="0">
+  <tr>
+		<td><img src="bilder/bild_8.gif" width="67" height="67" onclick="gameMovePic(0)"></td>
+		<td><img src="bilder/bild_5.gif" width="66" height="67" onclick="gameMovePic(1)"></td>
+		<td><img src="bilder/blind.gif" width="67" height="67" onclick="gameMovePic(2)"></td><!-- bild_03 -->
+  </tr>
+  <tr>
+  	<td><img src="bilder/bild_3.gif" width="67" height="66" onclick="gameMovePic(3)"></td>
+		<td><img src="bilder/bild_6.gif" width="66" height="66" onclick="gameMovePic(4)"></td>
+		<td><img src="bilder/bild_1.gif" width="67" height="66" onclick="gameMovePic(5)"></td>
+  </tr>
+  <tr>
+  	<td><img src="bilder/bild_4.gif" width="67" height="67" onclick="gameMovePic(6)"></td>
+		<td><img src="bilder/bild_7.gif" width="66" height="67" onclick="gameMovePic(7)"></td>
+		<td><img src="bilder/bild_0.gif" width="67" height="67" onclick="gameMovePic(8)"></td>
+  </tr>
+</table>
+
+<form name="f1">
+	<b>Anzahl Klicks:</b> <input type="text" name="clicks_on_me" value="0" size="5"><br>
+	<input type="button" name="b1" value="Neues Spiel starten">
+</form>
+
+</main>
+</body>
+</html>
