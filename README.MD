@@ -21,5 +21,5 @@ https://nadia0309.github.io/playground/blue_menu/<br>
 https://nadia0309.github.io/Usability-Test-Nadiia-Zwyssig.pdf<br>
 <p></p>
 <strong>#6 PORTFOLIO</strong><br>
-https://nadia0309.github.io/portfolio-nadiia-zwyssig.pdf
+https://nadia0309.github.io/portfolio-nadiia-zwyssig/
 <p></p>
